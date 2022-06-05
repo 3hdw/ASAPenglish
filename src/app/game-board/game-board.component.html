@@ -1,0 +1,21 @@
+<body>
+    <ul>
+        <li *ngFor="let leftWord of leftWords" class="left" (click)="select($event.target, 'left', leftWord)">
+            {{leftWord}}
+        </li>
+        <li *ngFor="let rightWord of rightWords" class="right" (click)="select($event.target, 'right', rightWord)">
+            {{rightWord}}
+        </li>
+    </ul>
+    <section id="popup">
+        <main>
+            <header>
+                <h1>Congrats! One more?</h1>
+                <h3>Your score: {{score}}</h3>
+            </header>
+            <footer>
+                <button (click)="onRestart()">Next stage</button>
+            </footer>
+        </main>
+    </section>
+</body>
