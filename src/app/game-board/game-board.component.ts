@@ -83,7 +83,6 @@ export class GameBoardComponent implements OnInit, OnDestroy {
 
   onFinish() {
     const element = document.getElementById('popup');
-    console.log(element);
     if (element) {
       element.style.opacity = '1';
       element.style.zIndex = '999';

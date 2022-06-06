@@ -69,15 +69,14 @@ export class ScoringService {
   }
 
   private _createPairs() {
-    console.log('ONCEEE');
     this.httpClient
       .get('assets/pairs.txt', { responseType: 'text' })
       .pipe(
         map((dataWithWhiteCharacters: string) =>
-          dataWithWhiteCharacters.replace(/[\r\n\t ]/gm, '')
+          dataWithWhiteCharacters.replace(/[\r\n\t]/gm, '')
         ),
         map((stringPairs: string) => {
-          const stringPairsArray: any = stringPairs.split(',');
+          const stringPairsArray: any = stringPairs.split('|');
           for (let i = 0; i < stringPairsArray.length; i++) {
             stringPairsArray[i] = stringPairsArray[i].split(':');
             this._dictionary.set(
