@@ -85,6 +85,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: rgb(77,164,234);
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
@@ -97,6 +98,7 @@ li{
     user-select: none;
     color: black;
     transition: all ease-in-out .2s;
+    padding: 2px;
 
     &:hover, &.selected{
         box-shadow: 0 0 1px 1px rgba(0,0,0,.5);
@@ -114,5 +116,6 @@ li{
         background-color: #028A0F;
         position: relative;
         cursor: initial;
+        color: white;
     }
 }
