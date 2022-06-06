@@ -1,2 +1,1 @@
 1) Budowanie projektu: ng build --output-path docs --base-href /<remote git repo name>/
-ng build --output-path docs --base-href /speluna/
