@@ -13,7 +13,7 @@ interface Select {
   styleUrls: ['./game-board.component.scss'],
 })
 export class GameBoardComponent implements OnInit, OnDestroy {
-  private _numberOfPuzzles: number = 10; // determines how many pairs you have to choose to finish a game
+  private _numberOfPuzzles: number = 6; // determines how many pairs you have to choose to finish a game
 
   constructor(private scoringService: ScoringService) {
     this._subscription = this.scoringService.currentState.subscribe((next) => {
