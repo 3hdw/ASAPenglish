@@ -41,16 +41,13 @@ export class ScoringService {
 
   public resetScore() {
     this._score = 0;
-    this._multiplier = 1;
   }
 
   public check(left: string, right: string): boolean {
     const result = this._dictionary.get(left) === right;
     if (result) {
-      this._score += this._multiplier * 10;
-      this._multiplier += 0.1;
+      this._score += 1;
     } else {
-      this._multiplier = 1;
     }
     return result;
   }
@@ -103,7 +100,6 @@ export class ScoringService {
 
   private _score: number = 0;
   private _pairs: string[][] = [];
-  private _multiplier: number = 1;
   private _dictionary: Map<string, string>;
   private _arrayPointer: number = 0;
 }
