@@ -11,10 +11,10 @@ body{
 }
 
 div{
-    background-image: url("/ASAPenglish/assets/logo.png");
+    background-image: url("/assets/logo.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
     height: 100%;
     width: 100%;
 }

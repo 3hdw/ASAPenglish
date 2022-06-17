@@ -9,9 +9,10 @@ body{
 }
 
 header{
-    width: 60%;
+    width: 70%;
     height: 20%;
-    margin-top:25px;
+    margin-top:10px;
+    min-width: 225px;
 }
 
 main{
@@ -27,12 +28,12 @@ main{
     }
 
     header{
-        width: 25%;
+        width: 40%;
         height: 20%;
-        max-width: 357px;
+        margin-top: 40px;
     }
 
     body{
         padding: 10px;
     }
-}  
+} 
