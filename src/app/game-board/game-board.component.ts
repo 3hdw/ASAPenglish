@@ -37,12 +37,12 @@ export class GameBoardComponent implements OnInit, OnDestroy {
               element.classList.add('completed');
               this._selectedRight.element.classList.remove('selected');
               this._selectedRight.element.classList.add('completed');
-              this._selectedLeft = null;
-              this._selectedRight = null;
               this._answered++;
             } else {
               this._selectedRight.element.classList.remove('selected');
             }
+            this._selectedLeft = null;
+            this._selectedRight = null;
           } else {
             if (this._selectedLeft !== null) {
               this._selectedLeft.element.classList.remove('selected');
@@ -60,12 +60,12 @@ export class GameBoardComponent implements OnInit, OnDestroy {
               element.classList.add('completed');
               this._selectedLeft.element.classList.remove('selected');
               this._selectedLeft.element.classList.add('completed');
-              this._selectedLeft = null;
-              this._selectedRight = null;
               this._answered++;
             } else {
               this._selectedLeft.element.classList.remove('selected');
             }
+            this._selectedLeft = null;
+            this._selectedRight = null;
           } else {
             if (this._selectedRight !== null) {
               this._selectedRight.element.classList.remove('selected');

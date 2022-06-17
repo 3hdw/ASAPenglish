@@ -1,9 +1,9 @@
 body{
     height: 100%;
     width: 100%;
-    background-color: white;
+    background-color: transparent;
     border-radius: 10px;
-    box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
+    // box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
     padding: 10px;
 }
 
@@ -16,7 +16,6 @@ section{
     left:0;
     right:0;
     bottom: 0;
-    z-index: 999;
     background-color: rgba(0,0,0,.5);
     opacity: 0;
     z-index: -999;
@@ -26,7 +25,7 @@ section{
 main{
     height: 50%;
     width: 65%;
-    background-color: white;
+    background-color: rgb(224, 217, 217);
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
     padding: 10px;
@@ -52,16 +51,18 @@ main{
         button{
             height: 100%;
             width: 100%;
+            max-width: 400px;
+            font-size: 20px;
             border: none;
-            background-color: rgb(77,164,234);
+            background-color: #ebb84c;//rgb(77,164,234);
             border-radius: 5px;
             text-transform: uppercase;
             font-weight: bolder;
-            color: white;
+            color: black;
             transition: background-color ease-in-out .2s;
 
             &:hover{
-                background-color: rgb(63, 136, 196);
+                background-color: #ca9e3f;//rgb(63, 136, 196);
             }
     
             &:active{
@@ -79,6 +80,10 @@ ul{
     height: 100%;
     width: 100%;
     gap: 10px;
+
+    @media only screen and (min-width: 900px){
+        column-gap: 50px;
+    }
 }
 
 li{
@@ -87,10 +92,11 @@ li{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(77,164,234);
+    background-color: #ffe555;//rgb(77,164,234);
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(0,0,0,.2);
     cursor: pointer;
+    max-width: 800px;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -103,7 +109,11 @@ li{
 
     &:hover, &.selected{
         box-shadow: 0 0 1px 1px rgba(0,0,0,.5);
-        background-color: rgb(63, 136, 196);
+        background-color: #dbc549//rgb(63, 136, 196);
+    }
+
+    &.selected{
+        background-color: #c2ac34
     }
 
     &.left{
@@ -118,5 +128,9 @@ li{
         position: relative;
         cursor: initial;
         color: white;
+
+        &:hover{
+            box-shadow: 0 0 10px 1px rgba(0,0,0,.2);;
+        }
     }
 }
