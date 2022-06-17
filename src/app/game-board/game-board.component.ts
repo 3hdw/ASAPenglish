@@ -90,12 +90,12 @@ export class GameBoardComponent implements OnInit, OnDestroy {
   }
 
   onRestart() {
-    this._answered = 0;
-    this._leftWords = [];
-    this._rightWords = [];
-    this._selectedLeft = null;
-    this._selectedRight = null;
-    this.generateWords();
+    // this._answered = 0;
+    // this._leftWords = [];
+    // this._rightWords = [];
+    // this._selectedLeft = null;
+    // this._selectedRight = null;
+    // this.generateWords();
     const element = document.getElementById('popup');
     // this.scoringService.resetScore();
     if (element) {
@@ -118,6 +118,9 @@ export class GameBoardComponent implements OnInit, OnDestroy {
   }
   get score() {
     return this.scoringService.score;
+  }
+  get numberOfPuzzles(){
+    return this._numberOfPuzzles;
   }
 
   private generateWords() {
